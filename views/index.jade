@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1.text-center Welcome to #{title}
+  h4.text-center= err
+  form(action="http://127.0.0.1:3003/login",method="post",enctype="multipart/form-data")
+    div.form-group
+      input(type="text",placeholder="username",name="uname",class="form-control")
+    div.form-group
+      input(type="email",placeholder="mail",name="mail",class="form-control")
+    div.form-group
+      input(type="password" ,placeholder="password", name="password",class="form-control")
+    div.form-group   
+      input(type="date" name="date",class="form-control")
+    div.form-group
+      input(type="number",placeholder="age",name="age",class="form-control") 
+    div.form-group
+      input(type="file",name="file",class="form-control")           
+    div.form-group
+      input(type="submit", value="submit",class="form-control")
+  div.text-center
+    a(href="http://127.0.0.1:3003/login") login

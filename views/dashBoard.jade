@@ -1,0 +1,9 @@
+extends layout
+
+block content
+ p
+  img.text-center(src= "images/"+image)
+  div.text-center= uname
+ p 
+  button(type="button")
+   a(href="/logout") logout
